@@ -6,7 +6,7 @@ from torchvision.transforms import ToTensor
 
 
 #1:  selecting device
-if torch.backends.mps.is_available():
+if torch.backends.mps.is_available(): # for apple processors
     device = torch.device("mps")
 elif torch.cuda.is_available():
     device = torch.device("cuda")
