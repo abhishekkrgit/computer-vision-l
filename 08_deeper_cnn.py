@@ -67,7 +67,7 @@ model = DeeperCNN().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(
     model.parameters(),
-    lr = 0.01,
+    lr = 0.03,
     momentum = 0.0
 )
 
