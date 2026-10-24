@@ -78,7 +78,7 @@ epochs = 10
 
 for epoch in range(epochs):
     model.train()
-    running_loss = 0.9
+    running_loss = 0.0
 
     for images, labels in train_loader:
         images = images.to(device)
@@ -99,7 +99,7 @@ for epoch in range(epochs):
     avg_loss = running_loss/len(train_loader)
     print(
             f"Epoch [{epoch + 1}/{epochs}], "
-            f"Loss: {avg_loss:.4f}"
+            f"Loss: {avg_loss:.2f}"
         )
 
 
@@ -129,7 +129,7 @@ with torch.no_grad():
 
 accuracy = 100*correct/total
 
-print(f"accuracy is :{accuracy}.4f")
+print(f"accuracy is :{accuracy:.2f}")
 
 
 
